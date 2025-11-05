@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Score Table</title>
+</head>
+<body>
+    <h2> Subject Scores</h2>
+    <table border="1" cellpadding="5">
+        <tr><th>Subject</th><th>Score</th></tr>
+        {% for sub, mark in scores.items() %}
+            <tr><td>{{ sub }}</td><td>{{ mark }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
