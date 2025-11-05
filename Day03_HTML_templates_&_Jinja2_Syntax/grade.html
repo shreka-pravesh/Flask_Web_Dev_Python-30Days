@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Checker</title>
+</head>
+<body>
+    <h2> Grade Result</h2>
+    <p>Your Marks: {{ marks }}</p>
+    {% if marks >= 50 %}
+        <p> You Passed!</p>
+    {% else %}
+        <p> You Failed. Try Again!</p>
+    {% endif %}
+</body>
+</html>
