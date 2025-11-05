@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Average Marks</title>
+</head>
+<body>
+    <h2> Average Marks Calculator</h2>
+    <p>Your Marks: {{ marks }}</p>
+    <p><b>Average:</b> {{ avg }}</p>
+    {% if avg >= 50 %}
+        <p> Great! You Passed!</p>
+    {% else %}
+        <p> You Need Improvement.</p>
+    {% endif %}
+</body>
+</html>
