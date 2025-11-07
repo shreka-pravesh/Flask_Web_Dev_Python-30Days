@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Inspiration Wall</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2> Inspiration Wall</h2>
+    <div class="quote-box">{{ quote }}</div>
+    <button onclick="window.location.reload()">New Quote</button>
+</body>
+</html>
