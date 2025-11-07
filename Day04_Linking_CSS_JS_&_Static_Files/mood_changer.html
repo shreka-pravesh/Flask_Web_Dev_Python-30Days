@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Mood Board</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h2> My Mood Board</h2>
+    <div class="mood-grid">
+        <div class="mood-card" onclick="toggleMood(this)"> Happy</div>
+        <div class="mood-card" onclick="toggleMood(this)"> Motivated</div>
+        <div class="mood-card" onclick="toggleMood(this)"> Calm</div>
+        <div class="mood-card" onclick="toggleMood(this)"> Focused</div>
+    </div>
+</body>
+</html>
