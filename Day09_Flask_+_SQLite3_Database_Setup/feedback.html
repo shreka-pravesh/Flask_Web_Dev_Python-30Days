@@ -1,0 +1,19 @@
+<html>
+<head><title>Feedback Collector</title></head>
+<body>
+<h2>Submit Your Feedback</h2>
+<form method="POST" action="/add">
+  Name: <input type="text" name="name" required>
+  <br><br>
+  Feedback: <textarea name="message" required></textarea>
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
+<h3>All Feedback</h3>
+<ul>
+{% for f in feedbacks %}
+  <li><strong>{{f[1]}}</strong>: {{f[2]}}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
