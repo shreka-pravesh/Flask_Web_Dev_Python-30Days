@@ -1,0 +1,16 @@
+<html>
+<head><title>Task Tracker</title></head>
+<body>
+<h2>Add Task</h2>
+<form method="POST" action="/add">
+  Task: <input type="text" name="title" required>
+  <button type="submit">Add</button>
+</form>
+<h3>Your Tasks</h3>
+<ul>
+{% for t in tasks %}
+  <li>{{t[1]}}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
