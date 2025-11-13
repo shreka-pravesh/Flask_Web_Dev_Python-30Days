@@ -1,0 +1,17 @@
+<html>
+<head><title>Student Records</title></head>
+<body>
+<h2>Add Student</h2>
+<form method="POST" action="/add">
+  Name: <input type="text" name="name" required>
+  Grade: <input type="text" name="grade" required>
+  <button type="submit">Save</button>
+</form>
+<h3>All Students</h3>
+<ul>
+{% for s in students %}
+  <li>{{s[1]}} - {{s[2]}}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
