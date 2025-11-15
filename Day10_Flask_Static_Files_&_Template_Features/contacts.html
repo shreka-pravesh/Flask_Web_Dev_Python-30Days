@@ -1,0 +1,17 @@
+<html>
+<head><title>Contacts</title></head>
+<body>
+  <h2>Contacts</h2>
+  <form method="post" action="/add">
+    Name: <input name="name" required>
+    Phone: <input name="phone" required>
+    <button type="submit">Add</button>
+  </form>
+  <h3>Saved Contacts</h3>
+  <ul>
+    {% for c in contacts %}
+      <li>{{c[1]}} — {{c[2]}} [<a href="/delete/{{c[0]}}">delete</a>]</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
