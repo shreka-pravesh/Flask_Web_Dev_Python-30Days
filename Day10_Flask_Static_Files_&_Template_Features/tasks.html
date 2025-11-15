@@ -1,0 +1,18 @@
+<html>
+<head><title>Tasks</title></head>
+<body>
+  <h2>Tasks</h2>
+  <form method="post" action="/add">
+    Task: <input name="title" required><button>Add</button>
+  </form>
+  <h3>Your Tasks</h3>
+  <ul>
+    {% for t in tasks %}
+      <li>
+        {% if t[2] %}<s>{{t[1]}}</s>{% else %}{{t[1]}}{% endif %}
+        [<a href="/toggle/{{t[0]}}">toggle</a> | <a href="/delete/{{t[0]}}">delete</a>]
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
