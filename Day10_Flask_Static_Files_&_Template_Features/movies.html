@@ -1,0 +1,16 @@
+<html>
+<head><title>Movie Collection</title></head>
+<body>
+  <h2>Movie Collection</h2>
+  <form method="post" action="/add">
+    Title: <input name="title" required> Year: <input name="year" type="number">
+    <button>Add</button>
+  </form>
+  <h3>Saved Movies</h3>
+  <ul>
+    {% for m in movies %}
+      <li>{{m[1]}} {% if m[2] %}({{m[2]}}){% endif %} — <a href="/delete/{{m[0]}}">delete</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
