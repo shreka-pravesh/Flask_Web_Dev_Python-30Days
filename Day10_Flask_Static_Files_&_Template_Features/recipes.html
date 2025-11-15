@@ -1,0 +1,17 @@
+<html>
+<head><title>Recipes</title></head>
+<body>
+  <h2>Recipe Manager</h2>
+  <form method="post" action="/add">
+    Name: <input name="name" required><br>
+    Steps: <br><textarea name="steps" required></textarea><br>
+    <button>Add</button>
+  </form>
+  <h3>Recipes</h3>
+  <ul>
+    {% for r in recipes %}
+      <li><b>{{r[1]}}</b>: {{r[2]}} [<a href="/delete/{{r[0]}}">delete</a>]</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
