@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h2>Shopping Cart</h2>
+    <h4>Your Items:</h4>
+    <ul>
+        {% for item in cart %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Add New Item</h3>
+    <form method="POST">
+        <input type="text" name="item" placeholder="Enter item name">
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
