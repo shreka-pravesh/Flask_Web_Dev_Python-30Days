@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Theme Switcher</title>
+    {% if theme == "dark" %}
+    <style>
+        body { background: #222; color: white; }
+    </style>
+    {% else %}
+    <style>
+        body { background: #f5f5f5; color: black; }
+    </style>
+    {% endif %}
+</head>
+<body>
+    <h2>Current Theme: {{ theme }}</h2>
+    <form method="POST">
+        <button type="submit" name="choice" value="light">Light Mode</button>
+        <button type="submit" name="choice" value="dark">Dark Mode</button>
+    </form>
+</body>
+</html>
