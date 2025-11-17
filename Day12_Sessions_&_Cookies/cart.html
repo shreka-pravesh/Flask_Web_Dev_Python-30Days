@@ -1,0 +1,21 @@
+<html>
+<head><title>Shopping Cart (Cookie)</title></head>
+<body>
+  <h2>Shopping Cart</h2>
+  <form method="post" action="/add">
+    Item: <input name="item" required>
+    <button type="submit">Add</button>
+  </form>
+  <h3>Your Cart</h3>
+  {% if cart %}
+    <ul>
+      {% for it in cart %}
+        <li>{{ it }}</li>
+      {% endfor %}
+    </ul>
+    <p><a href="/clear">Clear Cart</a></p>
+  {% else %}
+    <p>Your cart is empty.</p>
+  {% endif %}
+</body>
+</html>
