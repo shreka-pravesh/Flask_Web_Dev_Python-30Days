@@ -1,0 +1,15 @@
+<html>
+<head><title>Store Name (Session)</title></head>
+<body>
+  <h2>Store your name (session)</h2>
+  {% if name %}
+    <p>Hello, <b>{{ name }}</b> </p>
+    <p><a href="/clear">Clear name</a></p>
+  {% else %}
+    <form method="post">
+      <input name="name" placeholder="Enter your name" required>
+      <button type="submit">Save</button>
+    </form>
+  {% endif %}
+</body>
+</html>
