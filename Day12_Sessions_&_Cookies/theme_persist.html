@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>Theme Switcher (Session)</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .light { background: #fff; color: #111; }
+    .dark  { background: #111; color: #fff; }
+    button { padding: 8px 12px; margin-top: 10px; }
+  </style>
+</head>
+<body class="{{ theme }}">
+  <h2>Theme: {{ theme|capitalize }}</h2>
+  <p>Click the button to switch theme (stored in session).</p>
+  <form action="/toggle" method="get"><button type="submit">Toggle Theme</button></form>
+</body>
+</html>
