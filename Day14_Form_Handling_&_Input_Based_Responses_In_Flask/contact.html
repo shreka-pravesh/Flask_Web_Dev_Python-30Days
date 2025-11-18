@@ -1,0 +1,21 @@
+<html>
+<head><title>Contact</title></head>
+<body>
+  <h2>Contact Us</h2>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+      {% for category,msg in messages %}
+        <li style="color: {{ 'red' if category=='error' else 'green' }}">{{ msg }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <form method="post">
+    Name: <input name="name" required><br>
+    Message:<br>
+    <textarea name="message" rows="4" cols="40" required></textarea><br>
+    <button>Send</button>
+  </form>
+</body>
+</html>
