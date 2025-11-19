@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>My Blog</title>
+</head>
+<body>
+  <h2>My Blog</h2>
+  <p><a href="/new">Write a new post</a></p>
+  {% for p in posts %}
+    <article>
+      <h3>{{p[1]}}</h3>
+      <p>{{p[2]}}</p>
+      <hr>
+    </article>
+  {% else %}
+    <p>No posts yet.</p>
+  {% endfor %}
+</body>
+</html>
