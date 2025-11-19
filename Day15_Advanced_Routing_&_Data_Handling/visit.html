@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Visit Logger</title>
+</head>
+<body>
+    <h1>Visit Logger</h1>
+    <p>This page records every visit with IP address and time.</p>
+    <h3>Visit History:</h3>
+    <ul>
+        {% for visit in visits %}
+            <li>{{ visit.ip }} — {{ visit.time }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
