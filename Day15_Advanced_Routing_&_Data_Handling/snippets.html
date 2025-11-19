@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Code Snippets</title>
+</head>
+<body>
+  <h2>Code Snippets</h2>
+  <form method="post" action="/add">
+    Title: <input name="title" required>
+    Lang: <input name="lang" placeholder="python/js/html" required><br><br>
+    Code:<br>
+    <textarea name="code" rows="8" cols="60" required></textarea><br><br>
+    <button>Add</button>
+  </form>
+  <hr>
+  {% for s in snippets %}
+    <h3>{{s[1]}} <small>({{s[2]}})</small></h3>
+    <pre style="background:#f3f3f3; padding:8px;">{{s[3]}}</pre>
+    <p>[<a href="/delete/{{s[0]}}">delete</a>]</p>
+  {% endfor %}
+</body>
+</html>
