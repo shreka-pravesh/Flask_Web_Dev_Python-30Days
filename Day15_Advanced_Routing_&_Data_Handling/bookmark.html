@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Bookmarks</title>
+</head>
+<body>
+  <h2>Bookmarks</h2>
+  <form method="post" action="/add">
+    Title: <input name="title" required>
+    URL: <input name="url" required>
+    Tag (opt): <input name="tag">
+    <button>Add</button>
+  </form>
+  <ul>
+    {% for b in bookmarks %}
+     <li><a href="{{b[2]}}" target="_blank">{{b[1]}}</a> {% if b[3] %}- <em>{{b[3]}}</em>{% endif %} [<a href="/delete/{{b[0]}}">del</a>]</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
