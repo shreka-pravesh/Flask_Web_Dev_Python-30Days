@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Mini Notes</title>
+</head>
+<body>
+    <h2>Add a Note:</h2>
+    <form method="POST">
+        <textarea name="note" placeholder="Write something..." required></textarea>
+        <button>Save</button>
+    </form>
+    <h3>Saved Notes:</h3>
+    <ul>
+        {% for n in notes %}
+        <li>{{ n }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
