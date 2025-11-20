@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Number Sorter</title>
+</head>
+<body>
+    <h2>Enter numbers separated by commas</h2>
+    <form method="POST">
+        <input type="text" name="numbers" placeholder="12,5,9,3">
+        <button type="submit">Sort</button>
+    </form>
+    {% if result %}
+        <p>Sorted Numbers: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
