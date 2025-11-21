@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Reminder Box</title>
+</head>
+<body>
+    <h1>Reminder Box</h1>
+    <form method="POST">
+        <input type="text" name="reminder" placeholder="Add reminder..." required>
+        <button>Add</button>
+    </form>
+    <ul>
+        {% for r in reminders %}
+        <li>{{ r }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
