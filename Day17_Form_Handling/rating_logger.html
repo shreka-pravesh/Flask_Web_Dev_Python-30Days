@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Daily Rating</title>
+</head>
+<body>
+    <h1>Rate Your Day</h1>
+    <form method="POST">
+        <input type="number" name="rate" min="1" max="10" required>
+        <button>Submit</button>
+    </form>
+    <h2>Previous Ratings</h2>
+    <ul>
+        {% for r in ratings %}
+        <li>{{ r }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
