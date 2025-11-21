@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Flashcards</title>
+</head>
+<body>
+    <h1>Flashcards</h1>
+    {% for key, value in cards.items() %}
+    <p><strong>{{ key }}</strong>: {{ value }}</p>
+    {% endfor %}
+</body>
+</html>
