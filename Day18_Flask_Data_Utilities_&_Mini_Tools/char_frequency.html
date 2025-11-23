@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Character Counter</title>
+</head>
+<body>
+    <h2>Character Frequency Counter</h2>
+    <form method="POST">
+        <input type="text" name="text" placeholder="Type something" required>
+        <button type="submit">Count</button>
+    </form>
+    {% if counts %}
+        <h3>Results:</h3>
+        <ul>
+        {% for char, freq in counts.items() %}
+            <li>{{ char }} : {{ freq }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
