@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Temperature Formatter</title>
+</head>
+<body>
+    <h2>Temperature Formatter</h2>
+    <form method="post">
+        <label>Celsius:</label>
+        <input type="number" name="celsius" required step="0.1">
+        <button type="submit">Convert</button>
+    </form>
+    {% if result %}
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
