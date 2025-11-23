@@ -1,0 +1,16 @@
+<html>
+<head><title>Feedback Collector</title></head>
+<body>
+    <h2>Leave Feedback</h2>
+    <form method="POST">
+        <input type="text" name="fb" placeholder="Your feedback">
+        <button>Add</button>
+    </form>
+    <h3>All Feedback:</h3>
+    <ul>
+        {% for i in items %}
+        <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
