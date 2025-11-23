@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Budget Splitter</title>
+</head>
+<body>
+    <h2>Budget Splitter</h2>
+    <form method="post">
+        <label>Total Amount:</label>
+        <input type="number" name="amount" required><br><br>
+        <label>Number of People:</label>
+        <input type="number" name="people" required><br><br>
+        <button type="submit">Split</button>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
