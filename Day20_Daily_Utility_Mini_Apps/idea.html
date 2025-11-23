@@ -1,0 +1,16 @@
+<html>
+<head><title>Idea Bank</title></head>
+<body>
+    <h2>Add New Idea</h2>
+    <form method="POST">
+        <input type="text" name="idea" placeholder="Type idea">
+        <button>Add</button>
+    </form>
+    <h3>Your Ideas:</h3>
+    <ul>
+        {% for i in ideas %}
+        <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
