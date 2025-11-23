@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Text Encryptor</title>
+</head>
+<body>
+    <h2>Simple Text Encryptor</h2>
+    <form method="post">
+        <label>Enter Text:</label>
+        <input type="text" name="text" required>
+        <button type="submit">Encrypt</button>
+    </form>
+    {% if result %}
+        <p>Encrypted: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
