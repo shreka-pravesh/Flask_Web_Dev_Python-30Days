@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Time Difference Tool</title>
+</head>
+<body>
+    <h2>Time Difference Calculator</h2>
+    <form method="post">
+        <label>Time 1:</label>
+        <input type="time" name="time1" required><br><br>
+        <label>Time 2:</label>
+        <input type="time" name="time2" required><br><br>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
