@@ -1,0 +1,16 @@
+<html>
+<head><title>Sleep Tracker</title></head>
+<body>
+    <h2>Log Sleep Hours</h2>
+    <form method="POST">
+        <input type="number" name="hours" placeholder="Hours slept">
+        <button>Log</button>
+    </form>
+    <h3>Sleep Log:</h3>
+    <ul>
+        {% for h in logs %}
+        <li>{{ h }} hours</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
