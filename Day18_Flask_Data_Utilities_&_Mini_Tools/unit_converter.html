@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Unit Converter</title>
+</head>
+<body>
+    <h2>KM  Miles Converter</h2>
+    <form method="POST">
+        <input type="number" step="0.1" name="value" placeholder="Enter value" required>
+        <select name="mode">
+            <option value="km_to_miles">KM to Miles</option>
+            <option value="miles_to_km">Miles to KM</option>
+        </select>
+        <button type="submit">Convert</button>
+    </form>
+    {% if result %}
+        <p><strong>Converted Value:</strong> {{ result }}</p>
+    {% endif %}
+</body>
+</html>
