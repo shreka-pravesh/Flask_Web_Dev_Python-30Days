@@ -1,0 +1,15 @@
+<html>
+<body>
+<h2>Calorie Tracker</h2>
+<form method="POST" action="/add">
+    <input type="text" name="food" placeholder="Food item" required>
+    <input type="number" name="calories" placeholder="Calories" required>
+    <button>Add</button>
+</form>
+<ul>
+{% for r in records %}
+    <li>{{ r.food }} - {{ r.calories }} kcal</li>
+{% endfor %}
+</ul>
+</body>
+</html>
