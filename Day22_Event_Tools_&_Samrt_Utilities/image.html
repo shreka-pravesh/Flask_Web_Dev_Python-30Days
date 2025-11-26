@@ -1,0 +1,11 @@
+<html>
+<body>
+<h2>Image Caption Viewer</h2>
+{% for img in images %}
+<div>
+    <img src="{{ img.url }}" width="200">
+    <p>{{ img.caption }}</p>
+</div>
+{% endfor %}
+</body>
+</html>
