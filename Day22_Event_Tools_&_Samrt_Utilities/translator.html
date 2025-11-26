@@ -1,0 +1,12 @@
+<html>
+<body>
+<h2>Simple Translator</h2>
+<form method="POST" action="/convert">
+    <input type="text" name="word" placeholder="Enter English word" required>
+    <button>Translate</button>
+</form>
+{% if meaning %}
+<p><strong>Meaning:</strong> {{ meaning }}</p>
+{% endif %}
+</body>
+</html>
