@@ -1,0 +1,16 @@
+<html>
+<body>
+<h2>Add Event</h2>
+<form method="POST" action="/add">
+    <input type="text" name="event" placeholder="Event name" required>
+    <input type="date" name="date" required>
+    <button>Add</button>
+</form>
+<h3>Your Events</h3>
+<ul>
+    {% for e in events %}
+        <li>{{ e.event }} - {{ e.date }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
