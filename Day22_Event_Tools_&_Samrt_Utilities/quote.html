@@ -1,0 +1,17 @@
+<html>
+<body>
+<h2>Quote Search</h2>
+<form method="POST" action="/search">
+    <input type="text" name="word" placeholder="Type any word" required>
+    <button>Search</button>
+</form>
+{% if result %}
+<h3>Results:</h3>
+<ul>
+    {% for r in result %}
+        <li>{{ r }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</body>
+</html>
