@@ -1,0 +1,14 @@
+<html>
+<body>
+    <h2>Mood + Weather Logger</h2>
+    <form method="POST">
+        <input name="mood" placeholder="Your mood">
+        <input name="weather" placeholder="Weather now">
+        <button>Save</button>
+    </form>
+    <h3>History</h3>
+    {% for entry in log %}
+        <p>{{ entry.time }} — Mood: {{ entry.mood }}, Weather: {{ entry.weather }}</p>
+    {% endfor %}
+</body>
+</html>
