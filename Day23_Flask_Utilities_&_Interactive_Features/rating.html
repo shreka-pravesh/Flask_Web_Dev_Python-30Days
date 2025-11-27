@@ -1,0 +1,14 @@
+<html>
+<body>
+    <h2>Mini Product Rating</h2>
+    <form method="POST">
+        <input name="product" placeholder="Product name">
+        <input name="stars" type="number" min="1" max="5" placeholder="Rating (1-5)">
+        <button>Submit</button>
+    </form>
+    <h3>Submitted Ratings</h3>
+    {% for p, s in ratings %}
+        <p>{{ p }} —  {{ s }}</p>
+    {% endfor %}
+</body>
+</html>
