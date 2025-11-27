@@ -1,0 +1,12 @@
+<html>
+<body>
+    <h2>URL Slug Generator</h2>
+    <form method="POST">
+        <input name="title" placeholder="Enter a title">
+        <button>Generate</button>
+    </form>
+    {% if slug %}
+        <p>Slug: <b>{{ slug }}</b></p>
+    {% endif %}
+</body>
+</html>
